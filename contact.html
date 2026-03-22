@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Reservations | Dragonfly Tea Room & Gift Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🐉</span>
+        <div class="logo-text">
+          <span class="logo-name">Dragonfly</span>
+          <span class="logo-sub">Tea Room &amp; Gift Shop</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Reserve a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="section-eyebrow">We'd Love to See You</p>
+      <h1>Contact &amp; Reservations</h1>
+      <p>Reservations are strongly recommended. Reach us by phone or send a message below and we'll get back to you promptly.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container contact-layout">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <strong>Address</strong>
+            <p>215 Market St W<br />Canal Fulton, OH 44614</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <p><a href="tel:3308544832">(330) 854-4832</a></p>
+            <p class="small-note">Best way to reach us for reservations</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div>
+            <strong>Hours</strong>
+            <table class="hours-table">
+              <tr><td>Tuesday</td><td>11:00 AM – 3:00 PM</td></tr>
+              <tr><td>Wednesday</td><td>11:00 AM – 3:00 PM</td></tr>
+              <tr><td>Thursday</td><td>11:00 AM – 3:00 PM</td></tr>
+              <tr><td>Friday</td><td>11:00 AM – 3:00 PM</td></tr>
+              <tr><td>Saturday</td><td>11:00 AM – 3:00 PM</td></tr>
+              <tr class="closed-row"><td>Sunday</td><td>Closed</td></tr>
+              <tr class="closed-row"><td>Monday</td><td>Closed</td></tr>
+            </table>
+            <p class="small-note">After-hours Saturday events available for groups of 20+ (4–6 PM). <a href="events.html">Learn more.</a></p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📱</div>
+          <div>
+            <strong>Social Media</strong>
+            <p><a href="https://www.facebook.com/p/Dragonfly-Tea-Room-Gift-Shop-100063702302288/" target="_blank" rel="noopener">Facebook — Dragonfly Tea Room &amp; Gift Shop</a></p>
+            <p class="small-note">Follow us for upcoming events and seasonal specials</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🌐</div>
+          <div>
+            <strong>Official Website</strong>
+            <p><a href="https://www.dragonflyontheriver.com" target="_blank" rel="noopener">dragonflyontheriver.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <h2>Send Us a Message</h2>
+        <p>For reservations, please call us directly at <a href="tel:3308544832">(330) 854-4832</a>. For general inquiries, event questions, or gift shop questions, use the form below.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(330) 555-0000" />
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Type of Inquiry *</label>
+            <select id="inquiry" name="inquiry" required>
+              <option value="" disabled selected>Select one…</option>
+              <option value="reservation">Table Reservation</option>
+              <option value="private-party">Private Party / Event</option>
+              <option value="birthday">Children's Birthday Party</option>
+              <option value="bridal">Bridal / Baby Shower</option>
+              <option value="gift-shop">Gift Shop Question</option>
+              <option value="general">General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="100" placeholder="e.g. 6" />
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" />
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your visit, any questions, or what you have in mind for your event…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+          <p class="form-note">We aim to respond within 1–2 business days. For urgent inquiries, please call us directly.</p>
+        </form>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. We'll be in touch soon. In the meantime, feel free to call us at <a href="tel:3308544832">(330) 854-4832</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Map Placeholder -->
+  <section class="section bg-soft">
+    <div class="container">
+      <p class="section-eyebrow center">Find Us</p>
+      <h2 class="center">In the Heart of Canal Fulton</h2>
+      <p class="center subtext">The Dragonfly is located in the Historic District of Canal Fulton, directly across from the Ohio-Erie Canal and the St. Helena III Canal Boat — making it a wonderful stop on a day out exploring.</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.2!2d-81.5936!3d40.8884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8836c1f1a5b1a5a5%3A0x1234567890!2s215+Market+St+W%2C+Canal+Fulton%2C+OH+44614!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Dragonfly Tea Room, 215 Market St W, Canal Fulton, OH 44614">
+        </iframe>
+      </div>
+      <div class="directions-note center mt-1">
+        <a href="https://maps.google.com/?q=215+Market+St+W,+Canal+Fulton,+OH+44614" target="_blank" rel="noopener" class="btn btn-secondary">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo-icon">🐉</span>
+        <span class="logo-name">Dragonfly</span>
+        <p>Tea Room &amp; Gift Shop</p>
+        <p>Canal Fulton, Ohio</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Find Us</h4>
+        <p>215 Market St W<br />Canal Fulton, OH 44614</p>
+        <p><a href="tel:3308544832">(330) 854-4832</a></p>
+        <p>Tue – Sat: 11 AM – 3 PM<br />Sun – Mon: Closed</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <a href="https://www.facebook.com/p/Dragonfly-Tea-Room-Gift-Shop-100063702302288/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.dragonflyontheriver.com" target="_blank" rel="noopener">Official Website</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dragonfly Tea Room &amp; Gift Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
