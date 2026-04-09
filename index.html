@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dragonfly Tea Room & Gift Shop | Canal Fulton, Ohio</title>
-  <meta name="description" content="A charming tea room, winery, bed & breakfast, and gift shop in the heart of Canal Fulton, Ohio along the Tuscarawas River. Enjoy high tea, homemade pastries, 11 handcrafted wines, and unforgettable special events.">
-  <meta name="keywords" content="Dragonfly Tea Room, Canal Fulton, Ohio, tea room, winery, gift shop, bed and breakfast, high tea, Victorian tea, events">
+  <meta name="description" content="A charming tea room, winery, and gift shop in the heart of Canal Fulton, Ohio along the Tuscarawas River. Enjoy high tea, homemade pastries, 11 handcrafted wines, and unforgettable special events.">
+  <meta name="keywords" content="Dragonfly Tea Room, Canal Fulton, Ohio, tea room, winery, gift shop, high tea, Victorian tea, events">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +40,6 @@
         <li><a href="#menu" class="nav-link">Menu</a></li>
         <li><a href="#winery" class="nav-link">Winery</a></li>
         <li><a href="#events" class="nav-link">Events</a></li>
-        <li><a href="#bnb" class="nav-link">B&amp;B</a></li>
         <li><a href="#gallery" class="nav-link">Gallery</a></li>
         <li><a href="#reservations" class="nav-link nav-cta">Reserve a Table</a></li>
       </ul>
@@ -442,44 +441,6 @@
     </div>
   </section>
 
-  <!-- B&B Section -->
-  <section class="section bnb" id="bnb">
-    <div class="bnb-bg">
-      <div class="container">
-        <div class="bnb-grid">
-          <div class="bnb-content">
-            <p class="section-tag">Stay With Us</p>
-            <h2 class="section-title">The Dragonfly<br>Bed &amp; Breakfast</h2>
-            <p>Make a weekend of your visit! Our charming Bed &amp; Breakfast is nestled upstairs above the historic tea room, offering a cozy retreat in the heart of Canal Fulton.</p>
-            <p>Wake up to the sounds of the Tuscarawas River, then head downstairs for a delightful tea room breakfast. Spend your evening sipping handcrafted wines at the winery with live music. It's the perfect getaway.</p>
-            <div class="bnb-features">
-              <div class="bnb-feature">
-                <span>&#127968;</span>
-                <span>Historic Setting</span>
-              </div>
-              <div class="bnb-feature">
-                <span>&#127750;</span>
-                <span>River Views</span>
-              </div>
-              <div class="bnb-feature">
-                <span>&#9749;</span>
-                <span>Tea Room Access</span>
-              </div>
-              <div class="bnb-feature">
-                <span>&#127863;</span>
-                <span>Winery Next Door</span>
-              </div>
-            </div>
-            <a href="tel:+13308544832" class="btn btn-primary">Call to Book &middot; (330) 854-4832</a>
-          </div>
-          <div class="bnb-image">
-            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&h=700&fit=crop&q=80" alt="Cozy bed and breakfast room" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Gallery Section -->
   <section class="section gallery-section" id="gallery">
     <div class="container">
@@ -610,24 +571,31 @@
           </div>
         </div>
         <div class="reservation-form-wrapper">
-          <form class="reservation-form" id="reservationForm">
+          <form class="reservation-form" id="reservationForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <h3>Request a Reservation</h3>
-            <p class="form-note">Submit your request below and we'll confirm by phone. For same-day reservations, please call us directly.</p>
+            <p class="form-note">Submit your request below and we'll confirm by phone or email. For same-day reservations, please call us directly.</p>
+            <input type="hidden" name="_subject" value="New Reservation Request - Dragonfly Tea Room">
             <div class="form-row">
               <div class="form-group">
                 <label for="resName">Full Name *</label>
                 <input type="text" id="resName" name="name" required placeholder="Your name">
               </div>
               <div class="form-group">
-                <label for="resPhone">Phone Number *</label>
-                <input type="tel" id="resPhone" name="phone" required placeholder="(330) 000-0000">
+                <label for="resEmail">Email Address *</label>
+                <input type="email" id="resEmail" name="email" required placeholder="your@email.com">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
+                <label for="resPhone">Phone Number *</label>
+                <input type="tel" id="resPhone" name="phone" required placeholder="(330) 000-0000">
+              </div>
+              <div class="form-group">
                 <label for="resDate">Preferred Date *</label>
                 <input type="date" id="resDate" name="date" required>
               </div>
+            </div>
+            <div class="form-row">
               <div class="form-group">
                 <label for="resTime">Preferred Seating *</label>
                 <select id="resTime" name="time" required>
@@ -638,8 +606,6 @@
                   <option value="1:30 PM">1:30 PM</option>
                 </select>
               </div>
-            </div>
-            <div class="form-row">
               <div class="form-group">
                 <label for="resGuests">Number of Guests *</label>
                 <select id="resGuests" name="guests" required>
@@ -664,7 +630,6 @@
                   <option value="private-party">Private Party</option>
                   <option value="special-event">Special Event</option>
                   <option value="winery">Winery</option>
-                  <option value="bnb">Bed &amp; Breakfast</option>
                 </select>
               </div>
             </div>
@@ -710,7 +675,7 @@
             <span class="logo-icon">&#10047;</span>
             <span class="logo-text">Dragonfly</span>
           </div>
-          <p>A family-owned tea room, winery, bed &amp; breakfast, and gift shop in the heart of Canal Fulton, Ohio along the Tuscarawas River.</p>
+          <p>A family-owned tea room, winery, and gift shop in the heart of Canal Fulton, Ohio along the Tuscarawas River.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/p/Dragonfly-Tea-Room-Gift-Shop-100063702302288/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
             <a href="https://www.instagram.com/dragonflytearoom2019/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -724,7 +689,6 @@
           <a href="#menu">Full Menu</a>
           <a href="#winery">Winery</a>
           <a href="#events">Events</a>
-          <a href="#bnb">Bed &amp; Breakfast</a>
           <a href="#gallery">Gallery</a>
         </div>
         <div class="footer-links">

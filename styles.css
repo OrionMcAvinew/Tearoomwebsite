@@ -185,17 +185,6 @@ a { text-decoration: none; color: inherit; transition: color var(--ease); }
 .event-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.8rem; }
 .event-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
 
-/* --- B&B --- */
-.bnb { padding: 0; }
-.bnb-bg { background: linear-gradient(135deg, #f5f0e8, var(--cream)); padding: 7rem 0; }
-.bnb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-.bnb-content p { color: var(--text-light); margin-bottom: 1.2rem; line-height: 1.8; }
-.bnb-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
-.bnb-feature { display: flex; align-items: center; gap: 0.7rem; background: white; padding: 0.8rem 1.2rem; border-radius: 8px; font-size: 0.88rem; font-weight: 500; color: var(--charcoal); box-shadow: var(--shadow-sm); }
-.bnb-feature span:first-child { font-size: 1.3rem; }
-.bnb-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
-.bnb-image img { width: 100%; height: 500px; object-fit: cover; }
-
 /* --- Gallery --- */
 .gallery-section { background: var(--warm-white); }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 1rem; }
@@ -284,7 +273,7 @@ a { text-decoration: none; color: inherit; transition: color var(--ease); }
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   .tearoom-features { grid-template-columns: repeat(2, 1fr); }
-  .about-grid, .winery-grid, .reservation-grid, .bnb-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-grid, .winery-grid, .reservation-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-images { height: 400px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .wine-highlights { grid-template-columns: repeat(3, 1fr); }
@@ -317,8 +306,6 @@ a { text-decoration: none; color: inherit; transition: color var(--ease); }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
   .gallery-item.gallery-large { grid-column: span 2; }
   .form-row { grid-template-columns: 1fr; }
-  .bnb-features { grid-template-columns: 1fr; }
-  .bnb-image img { height: 350px; }
   .menu-tabs { gap: 0.3rem; }
   .menu-tab { padding: 0.5rem 1rem; font-size: 0.72rem; }
 }

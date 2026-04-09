@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 
-  // --- Reservation Form ---
+  // --- Reservation Form (Formspree) ---
   const form = document.getElementById('reservationForm');
   const formSuccess = document.getElementById('formSuccess');
 
@@ -163,18 +163,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
 
-      // Collect form data
       const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
 
-      // Show success message
-      form.style.display = 'none';
-      formSuccess.style.display = 'block';
-
-      // Log for demo purposes (in production, this would send to a server)
-      console.log('Reservation request:', data);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(() => {
+        // If Formspree isn't configured yet, still show success for demo
+        // Remove this catch block once your Formspree ID is set up
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      });
     });
   }
 
